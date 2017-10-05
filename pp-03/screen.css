@@ -42,18 +42,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   width: 25vw;
 }
 
-#three {
-
-}
-
-#two {
-
-}
-
-#one {
-
-}
-
 @media screen and (min-width: 600px) {
   #three {
     flex: 1 100%;

@@ -53,7 +53,7 @@ console.log(i) // should be 'undefined', not 3
         to function addTwo is 4 --> addTwo(4) in line 64. If you
         want this function to modify the variable x declared on
         line 5, the code in line 64 should be written as:
-        console.log(addTwo(x));
+        console.log(addTwo(x)); so the output would be 7.
        */
 
 function addTwo(x) {

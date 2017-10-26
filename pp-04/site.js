@@ -10,6 +10,7 @@ function double(num) {
 }
 
 double(6);
+double(2.5);
 console.log('The value of x is:', x, 'It should be 5.');
 
 //  2. Rewrite the corrected JavaScript above as a self-executing

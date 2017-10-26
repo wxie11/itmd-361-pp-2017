@@ -34,7 +34,7 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  the global scope:
 
 function arrayEach(array, func) {
-  for (var i = 0; i < array.length; i++) {
+  for (i = 0; i < array.length; i++) {
     func(array[i]);
   }
 }
@@ -46,6 +46,15 @@ console.log(i) // should be 'undefined', not 3
 //  4. Explain why this function does not modify the global
 //  variable x declared on line 5 above. Write your explanation
 //  as JavaScript comments.
+
+      /*
+        This function does not modify the global variable x
+        declared on line 5 above because the variable x assigned
+        to function addTwo is 4 --> addTwo(4) in line 64. If you
+        want this function to modify the variable x declared on
+        line 5, the code in line 64 should be written as:
+        console.log(addTwo(x));
+       */
 
 function addTwo(x) {
   x = x + 2;

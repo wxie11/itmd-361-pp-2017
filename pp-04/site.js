@@ -5,12 +5,11 @@
 var x = 5;
 
 function double(num) {
-  x = num * 2;
-  return x;
+  var x = num * 2;
+  return x; // now it returns 5 after any double(num) is called.
 }
 
 double(6);
-double(2.5);
 console.log('The value of x is:', x, 'It should be 5.');
 
 //  2. Rewrite the corrected JavaScript above as a self-executing
@@ -28,33 +27,34 @@ console.log('The value of x is:', x, 'It should be 5.');
 
   double(2.5);
   console.log('The value of x is:', x, 'It should be 5.');
-}) ();
+})();
 
 //  3. Correct this function so that there is no i variable in
 //  the global scope:
 
 function arrayEach(array, func) {
-  for (var i = 0; i < array.length; i++) {
+  var i = 0;
+  for (i = 0; i < array.length; i++) {
     func(array[i]);
   }
 }
 
-arrayEach(['red','green','blue'], console.log);
+arrayEach(['red', 'green', 'blue'], console.log);
 
-console.log(i) // should be 'undefined', not 3
+console.log(typeof(i)); // should be 'undefined', not 3
 
 //  4. Explain why this function does not modify the global
 //  variable x declared on line 5 above. Write your explanation
 //  as JavaScript comments.
 
-      /*
-        This function does not modify the global variable x
-        declared on line 5 above because the variable x assigned
-        to function addTwo is 4 --> addTwo(4) in line 64. If you
-        want this function to modify the variable x declared on
-        line 5, the code in line 64 should be written as:
-        console.log(addTwo(x)); so the output would be 7.
-       */
+
+// This function does not modify the global variable x
+// declared on line 5 above because the variable x assigned
+// locally to function addTwo is 4 --> addTwo(4) in line 65.
+// If you want this function to modify the variable x declared on
+// line 5, the code in line 65 should be written as:
+// console.log(addTwo(x)); so the output would be 7.
+
 
 function addTwo(x) {
   x = x + 2;

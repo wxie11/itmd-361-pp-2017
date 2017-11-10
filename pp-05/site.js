@@ -4,6 +4,7 @@ $(document).ready(function(){
   function ringDoorbell() {
     var doorbell = new Audio('media/doorbell.mp3');
     doorbell.play();
+    alert("The doorbell is ringing!");
   }
 
   $("#ringbell").on("click", function() {

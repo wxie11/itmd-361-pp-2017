@@ -6,7 +6,7 @@ $(document).ready(function(){
     doorbell.play();
   }
 
-  ringbell.addEventListener("click", function() {
+  $("#ringbell").on("click", function() {
     ringDoorbell();
   });
-})
+});

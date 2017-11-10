@@ -4,7 +4,6 @@ $(document).ready(function(){
   function ringDoorbell() {
     var doorbell = new Audio('media/doorbell.mp3');
     doorbell.play();
-    alert("The doorbell is ringing!");
   }
 
   $("#ringbell").on("click", function() {
@@ -12,7 +11,7 @@ $(document).ready(function(){
   });
 
   $(document).on("keypress", function(event) {
-    if(event.key == "d") {
+    if(event.key === "d") {
       ringDoorbell();
     }
   });
